@@ -306,7 +306,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 The library supports iOS 9 & above. 
 Some features like HKHeartbeatSeries are available only starting with iOS 13.0 and like HKElectrocardiogramm starting with iOS 14.0
 
-## Installation
+## Installation 
 
 ### Cocoapods
 

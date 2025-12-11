@@ -1,21 +1,45 @@
 # Versions
 
+## [3.1.5] - 12.11.2025
+
+### Added
+* `HKCategoryTypeIdentifierHypertensionEvent` (iOS 26.2)
+* Heterogeneous metadata support - `Metadata` now supports mixed types (`String`, `Date`, `Double`, `Int`) in a single dictionary
+* New `MetadataValue` enum with literal conformances for cleaner dictionary syntax
+
+### Changed
+* Minimum iOS deployment target updated to iOS 18.0
+* Podspec source updated to UHN fork (`github.com/UHN/HealthKitReporter`)
+
 ## [3.1.4] - 09.17.2025
 
-* Update example to support clinical record read.
-* Add isClinicalRecordAvailable function.
+### Added
+* `isClinicalRecordsAvailable` function to check clinical record availability
+* Example app support for clinical record reading
 
 ## [3.1.3] - 07.22.2025
 
-* Update example to support more health type indentifiers.
+### Changed
+* Example app updated to support more health data types
 
 ## [3.1.2] - 07.21.2025
 
-* Upgrade Health Type Identifiers until iOS 18.0.
+### Added
+* iOS 18.0 HealthKit type identifiers:
+  * **Category Types:** `bleedingAfterPregnancy`, `bleedingDuringPregnancy`, `sleepApneaEvent`
+  * **Quantity Types:** `appleSleepingBreathingDisturbances`, `crossCountrySkiingSpeed`, `distanceCrossCountrySkiing`, `distancePaddleSports`, `distanceRowing`, `distanceSkatingSports`, `estimatedWorkoutEffortScore`, `paddleSportsSpeed`, `rowingSpeed`
+* iOS 17.0 HealthKit type identifiers:
+  * **Quantity Types:** `cyclingCadence`, `cyclingFunctionalThresholdPower`, `cyclingPower`, `cyclingSpeed`, `physicalEffort`
+* iOS 16.0 HealthKit type identifiers:
+  * **Quantity Types:** `environmentalSoundReduction`, `workoutEffortScore`
+
+### Fixed
+* `audioExposureEvent` availability check
 
 ## [3.1.1] - 07.17.2025
 
-* Fix environmentalAudioExposure unit error.
+### Fixed
+* Audio exposure unit error for `environmentalAudioExposure`
 
 ## [3.1.0] - 08.01.2024
 

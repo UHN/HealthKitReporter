@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
   s.author                = { 'Victor Kachalov' => 'victorkachalov@gmail.com' }
   s.source                = { :git => 'https://github.com/UHN/HealthKitReporter.git', :tag => s.version.to_s }
-  s.platform              = :ios, '9.0'
-  s.ios.deployment_target = '9.0'
+  s.platform              = :ios, '18.0'
+  s.ios.deployment_target = '18.0'
   s.source_files          = 'Sources/**/*'
 
   s.test_spec 'Tests' do |t|

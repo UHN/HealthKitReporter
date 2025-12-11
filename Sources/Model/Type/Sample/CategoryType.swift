@@ -43,6 +43,7 @@ public enum CategoryType: Int, CaseIterable, SampleType {
     case heartburn
     case highHeartRateEvent
     case hotFlashes
+    case hypertensionEvent
     case infrequentMenstrualCycles
     case irregularHeartRhythmEvent
     case irregularMenstrualCycles
@@ -214,6 +215,10 @@ public enum CategoryType: Int, CaseIterable, SampleType {
         case .hotFlashes:
             if #available(iOS 13.6, *) {
                 return HKObjectType.categoryType(forIdentifier: .hotFlashes)
+            }
+        case .hypertensionEvent:
+            if #available(iOS 26.2, *) {
+                return HKObjectType.categoryType(forIdentifier: .hypertensionEvent)
             }
         case .infrequentMenstrualCycles:
             if #available(iOS 16.0, *) {

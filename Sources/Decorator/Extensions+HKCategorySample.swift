@@ -195,6 +195,17 @@ extension HKCategorySample: Harmonizable {
                     "\(type) is not available for the current iOS"
                 )
             }
+        case .hypertensionEvent:
+            if #available(iOS 26.2, *) {
+                if let value = HKCategoryValue(rawValue: value) {
+                    description = value.description
+                    detail = value.detail
+                }
+            } else {
+                throw HealthKitError.notAvailable(
+                    "\(type) is not available for the current iOS"
+                )
+            }
         case .infrequentMenstrualCycles,
              .irregularMenstrualCycles,
              .persistentIntermenstrualBleeding,

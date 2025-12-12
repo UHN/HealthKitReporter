@@ -196,7 +196,7 @@ extension HKCategorySample: Harmonizable {
                 )
             }
         case .hypertensionEvent:
-            if #available(iOS 26.2, *) {
+            if #available(iOS 16.2, *) {
                 if let value = HKCategoryValue(rawValue: value) {
                     description = value.description
                     detail = value.detail

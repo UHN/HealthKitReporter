@@ -217,7 +217,7 @@ public enum CategoryType: Int, CaseIterable, SampleType {
                 return HKObjectType.categoryType(forIdentifier: .hotFlashes)
             }
         case .hypertensionEvent:
-            if #available(iOS 16.2, *) {
+            if #available(iOS 26.2, *) {
                 return HKObjectType.categoryType(forIdentifier: .hypertensionEvent)
             }
         case .infrequentMenstrualCycles:
